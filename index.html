@@ -45,12 +45,12 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link active" href="#header">Home</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#resume">Resume</a></li>
-          <li><a class="nav-link" href="#services">Services</a></li>
-          <li><a class="nav-link" href="#portfolio">My Works</a></li>
-          <li><div class="gold-shimmer"><a class="nav-link text-gold" href="#contact">Hire Me</a></div></li>
+          <li><a class="nav-link active fsb" href="#header">Home</a></li>
+          <li><a class="nav-link fsb" href="#about">About</a></li>
+          <li><a class="nav-link fsb" href="#resume">Resume</a></li>
+          <li><a class="nav-link fsb" href="#services">Services</a></li>
+          <li><a class="nav-link fsb" href="#portfolio">My Works</a></li>
+          <li><div class="gold-shimmer"><a class="nav-link text-gold fsb" href="#contact">Hire Me</a></div></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -641,6 +641,34 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(function() {
+        var loaderDiv = document.querySelector(".loader-div");
+        loaderDiv.style.display = "none";
+        document.getElementById("fullscreenButton").style.display = "block";
+      }, 2000);
+    });
+  
+    var fullscreenButton = document.getElementsByClassName("fsb")[0];
+    fullscreenButton.addEventListener("click", function() {
+      var elem = document.documentElement;
+  
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.mozRequestFullScreen) { // Firefox
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { // IE/Edge
+        elem.msRequestFullscreen();
+      }
+    });
+  </script>
+  
+  
+  
 
 </body>
 
