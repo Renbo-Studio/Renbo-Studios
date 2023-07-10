@@ -1089,7 +1089,7 @@ section .container {
 
 .contact .php-email-form .error-message {
   display: none;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0);
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
